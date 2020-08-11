@@ -7,14 +7,12 @@
 <% @word_letters.each do |letter| %>
   <% if @letters.include?(letter) == false %>
     Sorry but <b><%= @word %></b> can't be built out of <%= @letters.join(",") %>
-    <% break %>
   <% elsif @english_words["error"] == "word not found" %>
     Sorry but <b><%= @word %></b> does not seem to be a valid English word...
-    <% break %>
   <% else %>
     <b>Congratulations!</b> <%= @word %> is a valid English word!
-    <% break %>
   <% end %>
+  <% break %>
 <% end %>
 <br>
 
